@@ -2,6 +2,7 @@
 # Compile and Install of the Octave Tool
 
 This repository contains a **make** file for easy compile and install of [Octave](https://octave.org).
+Octave is a high-level language, primarily intended for numerical computations. It provides a convenient command line interface for solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible with Matlab.
 
 # Get Source Code
 
@@ -53,8 +54,10 @@ make compile
 sudo make install
 ```
 
-# References
+
+# Links
 
 * https://octave.org
-* https://gnu-octave.github.io/packages/
+* https://gnu-octave.github.io/packages
 * https://github.com/gnu-octave
+* https://wiki.octave.org/Building
