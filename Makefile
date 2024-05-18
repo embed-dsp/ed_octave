@@ -1,8 +1,6 @@
 
-# Copyright (c) 2021-2023 embed-dsp, All Rights Reserved.
+# Copyright (c) 2021-2024 embed-dsp, All Rights Reserved.
 # Author: Gudmundur Bogason <gb@embed-dsp.com>
-
-# https://wiki.octave.org/Building
 
 PACKAGE_NAME = octave
 
