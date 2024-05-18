@@ -4,7 +4,7 @@
 
 PACKAGE_NAME = octave
 
-PACKAGE_VERSION = 8.1.0
+PACKAGE_VERSION = 9.1.0
 
 PACKAGE = $(PACKAGE_NAME)-$(PACKAGE_VERSION)
 
@@ -20,9 +20,6 @@ ifeq ($(findstring MINGW32, $(shell uname -s)), MINGW32)
 endif
 ifeq ($(findstring MINGW64, $(shell uname -s)), MINGW64)
 	SYSTEM = mingw64
-endif
-ifeq ($(findstring CYGWIN, $(shell uname -s)), CYGWIN)
-	SYSTEM = cygwin
 endif
 
 # Determine machine.
@@ -112,6 +109,23 @@ install:
 .PHONY: clean
 clean:
 	-rm -rf build/$(PACKAGE)-obj
+
+# ==============================================================================
+
+# configure: WARNING: RapidJSON library not found.  Octave will not be able to read or write JSON files.
+# configure: WARNING: GLPK library not found.  The glpk function for solving linear programs will be disabled.
+# configure: WARNING: Your installation of Qt version 6 appears incomplete or broken in some way.  Fix that or use --with-qt=VER to use another version.
+# configure: WARNING: Qt libraries not found; disabling Qt GUI
+# configure: WARNING: FLTK config script not found.  FLTK toolkit will be disabled.
+# configure: WARNING: qrupdate not found.  The QR & Cholesky updating functions will be slow.
+# configure: WARNING: SUNDIALS NVECTOR serial library not found.  The solvers ode15i and ode15s will be disabled.
+# configure: WARNING: ARPACK not found.  The eigs function will be disabled.
+# configure: WARNING: 
+# configure: WARNING: The libraries needed for OpenGL graphics were not found.
+# configure: WARNING: Creating plots is still possible if gnuplot is installed.
+# configure: 
+# configure: NOTE: Libraries or auxiliary programs may be skipped if they are not found
+# configure: NOTE: OR if they are missing required features on your system.
 
 # ==============================================================================
 
